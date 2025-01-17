@@ -1,0 +1,18 @@
+﻿@model eventGestion.Models.EventItems.Event
+
+@{
+    ViewData["Title"] = "Détails de l'événement";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <h2>@Model.Name</h2>
+    <p><strong>Date :</strong> @Model.Date.ToString("dd/MM/yyyy")</p>
+    <p><strong>Lieu :</strong> @Model.Location</p>
+    <p><strong>Nombre de participants :</strong> @Model.Participants?.Count</p> 
+</div>
+
+<div>
+    <a href="@Url.Action("Index", "Event")" class="btn btn-primary">Retour à la liste</a>
+</div>
